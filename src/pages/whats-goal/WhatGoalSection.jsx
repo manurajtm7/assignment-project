@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const WhatGoalSection = () => {
+  const navigate = useNavigate();
   const GoalsData = [
     "Weight loss",
     "Muscle gain",
@@ -12,7 +14,9 @@ const WhatGoalSection = () => {
   return (
     <div className="w-full h-screen">
       <div className="w-full text-center  ">
-        <h2 className="text-2xl font-bold pt-12 font-sans ">What are your goals?</h2>
+        <h2 className="text-2xl font-bold pt-12 font-sans ">
+          What are your goals?
+        </h2>
       </div>
       <div className="w-full h-[60%] flex gap-6 flex-col items-center justify-center">
         {GoalsData.map((data, index) => (
@@ -26,7 +30,10 @@ const WhatGoalSection = () => {
         ))}
       </div>
       <div className="w-full text-center grid place-items-center ">
-        <div className="w-[90%] h-14 bg-gradient-to-r from-blue-300 to-blue-500 grid place-items-center  rounded-2xl   ">
+        <div
+          onClick={() => navigate("/workout-track")}
+          className="w-[90%] h-14 bg-gradient-to-r from-blue-300 to-blue-500 grid place-items-center  rounded-2xl   "
+        >
           <h1 className="text-lg font-semibold text-white ">Confirm</h1>
         </div>
       </div>

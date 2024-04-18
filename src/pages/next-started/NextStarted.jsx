@@ -11,7 +11,7 @@ function NextStarted() {
   ];
   return (
     <div className="w-full h-screen">
-      <GetStarted img={img} info={informationSet[0]} />
+      <GetStarted img={img} info={informationSet[0]} route={"/create-account"} />
     </div>
   );
 }
