@@ -1,0 +1,30 @@
+.make-it-toggle {
+  position: relative;
+}
+.make-it-toggle::after {
+  content: "";
+  width: 45%;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.active-set-button {
+  position: relative;
+}
+.active-set-button::after {
+  content: "";
+  width: 45%;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
